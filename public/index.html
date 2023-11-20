@@ -268,33 +268,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function mobileSidebar() {
-        document.getElementById("sidebar").style.display = "block";
-      }
-
-      function mobileSidebarClose() {
-        document.getElementById("sidebar").style.display = "none";
-      }
-
-      // Function to handle window resize
-      function handleResize() {
-        var windowWidth = window.innerWidth;
-
-        // If the window width is greater than or equal to the breakpoint for hiding the sidebar
-        if (windowWidth >= 640) {
-          document.getElementById("sidebar").style.display = "block";
-        } else {
-          document.getElementById("sidebar").style.display = "none";
-        }
-      }
-
-      // Attach the handleResize function to the window resize event
-      window.addEventListener("resize", handleResize);
-
-      // Call handleResize once on page load to set initial state
-      handleResize();
-    </script>
   </body>
 </html>

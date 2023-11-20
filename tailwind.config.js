@@ -13,6 +13,9 @@ module.exports = {
         white: "#ffffff",
         black: "#000000",
       },
+      height: {
+        sidebar: "97%",
+      },
     },
   },
 };
