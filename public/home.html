@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full">
+<html 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
   </head>
   <body class="h-full bg-black">
     <div id="sidebarWrap" class="sm:p-2">
-      <aside id="sidebar" class="fixed z-40 w-64 h-screen bg-primary hidden sm:block pt-0 transition-all rounded-lg" aria-label="Sidebar">
+      <aside id="sidebar" class="fixed z-40 w-64 h-sidebar bg-primary hidden sm:block pt-0 transition-all rounded-lg">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-primary rounded-lg">
           <!-- Tombol Buat Sidebar tutup-->
           <div class="flex items-center sm:hidden mb-5 mt-5" id="sidebarButClose">
@@ -28,9 +28,11 @@
           </div>
           <!-- END SIdebar Button -->
           <hr class="bg-coba border-none h-1 rounded-2xl sm:hidden" />
+
+          <!-- Home Button -->
           <ul class="space-y-2 font-medium mb-5 mt-5">
             <li>
-              <a href="home.html" class="flex items-center p-2 text-white rounded-lg bg-secondary hover:bg-secondary">
+              <a href="home.html" class="flex items-center p-2 text-white rounded-lg bg-secondary hover:bg-secondary text-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path
                     d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
@@ -39,8 +41,11 @@
                 <span class="ms-3">Home</span>
               </a>
             </li>
+            <!-- End Home Button -->
+
+            <!-- Explore -->
             <li>
-              <a href="explore.html" class="flex items-center p-2 text-white rounded-lg hover:bg-secondary group">
+              <a href="explore.html" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-compass flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                   <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
@@ -48,8 +53,10 @@
                 <span class="flex-1 ms-3 whitespace-nowrap">Explore</span>
               </a>
             </li>
+            <!-- End Explore -->
+
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-secondary group">
+              <a href="#" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-card-heading flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
                   <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z" />
@@ -131,34 +138,16 @@
 
             <!-- Profile Picture -->
             <div class="flex items-center">
-              <div class="flex items-center">
-                <div>
-                  <button type="button" class="flex text-sm me-3 sm:me-0 bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-10 h-10 object-cover rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo" />
-                  </button>
+              <button class="avatar dropdown dropdown-end focus:ring-white focus:ring-2 rounded-full transition-all">
+                <div class="w-11 rounded-full">
+                  <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                 </div>
-                <div class="z-30 hidden absolute my-4 text-base list-none bg-primary divide-y divide-gray-100 rounded shadow" id="dropdown-user">
-                  <div class="px-4 py-3" role="none">
-                    <p class="text-sm text-white" role="none">Neil Sims</p>
-                    <p class="text-sm font-medium text-white truncate" role="none">neil.sims@flowbite.com</p>
-                  </div>
-                  <ul class="py-1" role="none">
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Earnings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Sign out</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+                <ul class="dropdown-content z-50 menu p-3 mt-3 shadow bg-black rounded-box w-52">
+                  <li><a class="hover:text-white rounded-t-xl rounded-b-none">Profile</a></li>
+                  <li class="hover:bg-red-700 rounded-b-xl"><a class="hover:text-white">Logout</a></li>
+                </ul>
+              </button>
             </div>
             <!-- End Profile -->
           </div>
@@ -420,33 +409,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      function mobileSidebar() {
-        document.getElementById("sidebar").style.display = "block";
-      }
-
-      function mobileSidebarClose() {
-        document.getElementById("sidebar").style.display = "none";
-      }
-
-      // Function to handle window resize
-      function handleResize() {
-        var windowWidth = window.innerWidth;
-
-        // If the window width is greater than or equal to the breakpoint for hiding the sidebar
-        if (windowWidth >= 640) {
-          document.getElementById("sidebar").style.display = "block";
-        } else {
-          document.getElementById("sidebar").style.display = "none";
-        }
-      }
-
-      // Attach the handleResize function to the window resize event
-      window.addEventListener("resize", handleResize);
-
-      // Call handleResize once on page load to set initial state
-      handleResize();
-    </script>
+    <script src="js/sidebarMobile.js"></script>
   </body>
 </html>
