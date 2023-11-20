@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html 
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,6 +83,7 @@
       </aside>
     </div>
     <div class="sm:px-4 sm:ml-64">
+      <!-- NAVBAR -->
       <nav class="z-30 w-full bg-primary rounded-md sticky top-0 sm:relative">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -153,68 +154,37 @@
           </div>
         </div>
       </nav>
+      <!-- NAVBAR END -->
+
       <div class="bg-primary border-gray-200 dark:border-gray-700 p-4 rounded-lg mt-4">
         <div class="p-4 border-gray-200 rounded-lg dark:border-gray-700">
           <div class="flex items-center justify-left h-18 mb-4 rounded">
             <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #379683; font-weight: bold">Popular Artist</p>
           </div>
-          <div class="grid grid-cols-4 gap-4 mb-4 mt-8">
-            <div class="flex items-center h-24 rounded">
-              <li class="list-none">
-                <p class="text-2xl bg-gray-100 rounded text-gray-400 dark:text-gray-500">
-                  <img
-                    class="items-center justify-center h-24 rounded fi"
-                    style="object-fit: fill"
-                    src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                    alt="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                  />
-                </p>
-                <div class="flex items-center justify-center h-18 mt-3 rounded bg-gray-50 dark:bg-gray-800">
-                  <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #ffffff">NewJeans</p>
-                </div>
-              </li>
+          <div class="grid grid-cols-4 gap-4 mb-4 mt-8 transition-all">
+            <div class="card xl:w-56 w-40 shadow-xl">
+              <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+              <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+              </div>
             </div>
-            <div class="flex items-center h-24 rounded">
-              <li class="list-none">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                  <img
-                    class="items-center justify-center h-24 rounded"
-                    src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                    alt="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                  />
-                </p>
-                <div class="flex items-center justify-center h-18 mt-3 rounded bg-gray-50 dark:bg-gray-800">
-                  <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #ffffff">NewJeans</p>
-                </div>
-              </li>
+            <div class="card w-56 shadow-xl">
+              <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+              <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+              </div>
             </div>
-            <div class="flex items-center h-24 rounded">
-              <li class="list-none">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                  <img
-                    class="items-center justify-center h-24 rounded"
-                    src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                    alt="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                  />
-                </p>
-                <div class="flex items-center justify-center h-18 mt-3 rounded bg-gray-50 dark:bg-gray-800">
-                  <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #ffffff">NewJeans</p>
-                </div>
-              </li>
+            <div class="card w-56 shadow-xl">
+              <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+              <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+              </div>
             </div>
-            <div class="flex items-center h-24 rounded">
-              <li class="list-none">
-                <p class="text-2xl text-gray-400 dark:text-gray-500">
-                  <img
-                    class="items-center justify-center h-24 rounded"
-                    src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                    alt="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                  />
-                </p>
-                <div class="flex items-center justify-center h-18 mt-3 rounded bg-gray-50 dark:bg-gray-800">
-                  <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #ffffff">NewJeans</p>
-                </div>
-              </li>
+            <div class="card w-56 shadow-xl">
+              <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+              <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+              </div>
             </div>
           </div>
         </div>
@@ -229,7 +199,6 @@
                   <img
                     class="items-center justify-center h-24 rounded"
                     src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
-                    alt="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww"
                   />
                 </p>
                 <div class="flex items-center justify-center h-18 mt-3 rounded bg-gray-50 dark:bg-gray-800">
