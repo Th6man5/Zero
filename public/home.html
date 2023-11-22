@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full bg-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +12,9 @@
       }
     </style>
   </head>
-  <body class="h-full bg-black">
+  <body>
     <div id="sidebarWrap" class="sm:p-2">
-      <aside id="sidebar" class="fixed z-40 w-64 h-sidebar bg-primary hidden sm:block pt-0 transition-all rounded-lg">
+      <aside id="sidebar" class="fixed z-40 w-64 h-sidebar bg-primary hidden sm:block pt-0 transition-all rounded-lg mt-1">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-primary rounded-lg">
           <!-- Tombol Buat Sidebar tutup-->
           <div class="flex items-center sm:hidden mb-5 mt-5" id="sidebarButClose">
@@ -84,7 +84,7 @@
         </div>
       </aside>
     </div>
-    <div class="sm:px-4 sm:ml-64">
+    <div class="sm:px-4 sm:ml-64 pb-3">
       <!-- NAVBAR -->
       <nav class="z-30 w-full bg-primary rounded-md sticky top-0 sm:relative">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -141,7 +141,7 @@
 
             <!-- Profile Picture -->
             <div class="flex items-center">
-              <button class="avatar dropdown dropdown-end focus:ring-white focus:ring-2 rounded-full transition-all">
+              <button class="avatar dropdown dropdown-end focus:ring-white focus:ring-2 rounded-full transition-all btn-ghost">
                 <div class="w-11 rounded-full">
                   <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                 </div>
@@ -158,11 +158,10 @@
       </nav>
       <!-- NAVBAR END -->
 
-      <div class="bg-primary border-gray-200 dark:border-gray-700 p-4 rounded-lg mt-4">
+      <div class="bg-primary p-4 rounded-lg mt-4 h-full">
         <div class="p-4">
-          <div class="flex items-center justify-left h-18 mb-4 rounded">
-            <h1 class="text-3xl text-accent font-bold">Popular Artist</h1>
-          </div>
+          <h1 class="text-3xl text-accent font-bold my-4">Popular Artist</h1>
+
           <div class="carousel w-full carousel-center rounded-box h-48">
             <div class="carousel-item lg:mr-20 mr-5">
               <div class="card w-56 shadow-xl">
@@ -215,11 +214,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4">
-          <div class="flex items-center justify-left h-18 mb-4 rounded">
-            <h1 class="text-3xl text-accent font-bold">Popular Artist</h1>
-          </div>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Recommendation</h1>
+
           <div class="carousel w-full carousel-center rounded-box h-48">
             <div class="carousel-item lg:mr-20 mr-5">
               <div class="card w-56 shadow-xl">
@@ -272,11 +269,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4">
-          <div class="flex items-center justify-left h-18 mb-4 rounded">
-            <h1 class="text-3xl text-accent font-bold">Popular Artist</h1>
-          </div>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Recently Played</h1>
+
           <div class="carousel w-full carousel-center rounded-box h-48">
             <div class="carousel-item lg:mr-20 mr-5">
               <div class="card w-56 shadow-xl">
@@ -329,11 +324,64 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="p-4">
-          <div class="flex items-center justify-left h-18 mb-4 rounded">
-            <p class="text-2xl text-gray-400 dark:text-gray-500" style="color: #379683; font-weight: bold">Popular Artist</p>
+
+          <h1 class="text-3xl text-accent font-bold my-4">K-pop</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fHww" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Indonesian</h1>
+
           <div class="carousel w-full carousel-center rounded-box h-48">
             <div class="carousel-item lg:mr-20 mr-5">
               <div class="card w-56 shadow-xl">
@@ -390,5 +438,6 @@
       </div>
     </div>
     <script src="js/sidebarMobile.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
