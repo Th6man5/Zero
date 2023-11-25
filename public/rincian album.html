@@ -152,49 +152,101 @@
         </div>
       </nav>
       <!-- NAVBAR END -->
+
       <div class="p-4 bg-primary rounded-lg mt-4">
-        <div class="relative bg-black rounded-lg">
-        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" class="w-52 rounded-lg"/>
-        </div> 
-          <div class="overflow-x-auto w-full bg-primary relative mt-3">
-            <table class="table">
-              <!-- head -->
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Name</th>
-                  <th>Job</th>
-                  <th>Favorite Color</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- row 1 -->
-                <tr>
-                  <th>1</th>
-                  <td>Cy Ganderton</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
-                </tr>
-                <!-- row 2 -->
-                <tr>
-                  <th>2</th>
-                  <td>Hart Hagerty</td>
-                  <td>Desktop Support Technician</td>
-                  <td>Purple</td>
-                </tr>
-                <!-- row 3 -->
-                <tr>
-                  <th>3</th>
-                  <td>Brice Swyre</td>
-                  <td>Tax Accountant</td>
-                  <td>Red</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="bg-gradient-to-t from-current1 to-current2 rounded-lg flex relative">
+          <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="w-52 rounded-l-lg" />
+          <div class="p-4 md:flex">
+            <h2 class="pl-7 text-6xl font-medium text-white">Currents</h2>
+            <ul class="text-white mt-3 ms-3">
+              <li>Tame Impala</li>
+              <li>2015</li>
+            </ul>
+            <!-- <div class="grid grid-rows-2">
+              <div class="row-span-1 text-base text-unhover p-0">Tame Impala</div>
+              <div class="row-span-1 text-sm text-unhover">2015 • 13 songs</div>
+            </div> -->
           </div>
-          </div>          
+          <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Album</div>
+        </div>
+        <div class="flex my-4 justify-end">
+          <button class="p-2 px-6 bg-gradient-to-t from-primary to-secondary rounded-xl shadow-lg text-white">Album Rating</button>
+        </div>
+        <div class="overflow-x-auto w-full bg-primary relative mt-3">
+          <table class="table text-white">
+            <!-- head -->
+            <thead>
+              <tr class="text-white text-lg">
+                <th class="w-5 font-light">#</th>
+                <th class="font-light">Title</th>
+                <th class="w-24"></th>
+                <th class="w-16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                  </svg>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- row 1 -->
+              <tr>
+                <th>1</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">Let It Happen</div>
+                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">7:47</td>
+              </tr>
+              <!-- row 2 -->
+              <tr>
+                <th>2</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">Nangs</div>
+                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">1:47</td>
+              </tr>
+              <!-- row 3 -->
+              <tr>
+                <th>3</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">The Moment</div>
+                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">4:15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </body>
 </html>
-
