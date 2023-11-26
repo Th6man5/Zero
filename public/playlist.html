@@ -29,12 +29,12 @@
               </svg>
             </a>
           </div>
-          <!-- END SIdebar Button -->
+          <!-- END Sidebar Button -->
           <hr class="bg-coba border-none h-1 rounded-2xl sm:hidden" />
           <ul class="space-y-2 font-medium mb-5 mt-5">
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg bg-secondary hover:bg-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
+              <a href="#" class="flex items-center p-2 text-white rounded-lg bg-primary hover:bg-secondary group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path
                     d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
                   />
@@ -168,131 +168,182 @@
           </div>
         </div>
       </nav>
-
-
-        <div class="flex flex-row gap-10 items-left h-48 mb-4 mt-4 rounded-lg bg-gradient-to-b from-[#02209A] to-[#8892B2] relative">
-          <div class="w-48 h-48">
-            <img class="rounded-lg rounded-r-none" src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-          </div>
-          <div class="flex flex-col gap-14 my-auto">
-            <div class="text-6xl text-white">GameBoi</div>
-            <div class="flex flex-row gap-3">
-              <div class="w-6 h-6 rounded-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1521156078952-670635fe748f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-              </div>
-              <div class="text-lg text-white">By: Tim Burton</div>
+        <div class="p-4 bg-primary rounded-t-lg mt-4">
+          <div class="bg-gradient-to-b from-[#02209A] to-[#8892B2] rounded-lg flex relative">
+            <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-52 rounded-l-lg" />
+            <div class="p-4 md:flex">
+              <h2 class="pl-7 text-6xl font-medium text-white">GameBoi</h2>
+              <ul class="flex text-white mt-3 ms-3 absolute bottom-8 left-60">
+                  <img class="w-6 h-6 mr-4 object-cover rounded-full overflow-hidden" src="https://images.unsplash.com/photo-1521156078952-670635fe748f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                  By: Tim Burton
+              </ul>
             </div>
+            <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Playlist</div>
           </div>
-          <div class="w-24 h-10 text-center rounded-tr-lg rounded-bl-lg bg-accent absolute top-0 right-0">
-            <h2 class="text-lg text-white">Playlist</h2>
+          <div class="overflow-x-auto w-full bg-primary relative mt-3">
+            <table class="table text-white">
+              <!-- head -->
+              <thead>
+                <tr class="text-white text-lg">
+                  <th class="w-5 font-light">#</th>
+                  <th class="font-light">Title</th>
+                  <th class="w-24"></th>
+                  <th class="w-16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
+                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                    </svg>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <th>1</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">GAM3 BO1</div>
+                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">3:09</td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <th>2</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">JULIETTE (Feat. UMI)</div>
+                      <div class="row-span-1 text-unhover text-sm">pH-1, UMI</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">3:06</td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                  <th>3</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">Fire</div>
+                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">2:38</td>
+                </tr>
+                <!-- row 4 -->
+                <tr>
+                  <th>4</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">GODS</div>
+                      <div class="row-span-1 text-unhover text-sm">League of Legends, NewJeans</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">3:40</td>
+                </tr>
+                <!-- row 5 -->
+                <tr>
+                  <th>5</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">Lightsaber</div>
+                      <div class="row-span-1 text-unhover text-sm">EXO</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">3:04</td>
+                </tr>
+                <!-- row 6 -->
+                <tr>
+                  <th>6</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">Ash</div>
+                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">3:21</td>
+                </tr>
+                <!-- row 7 -->
+                <tr>
+                  <th>7</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">Perfect Night</div>
+                      <div class="row-span-1 text-unhover text-sm">LE SSERAFIM</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">2:39</td>
+                </tr>
+                <!-- row 8 -->
+                <tr>
+                  <th>8</th>
+                  <td>
+                    <div class="grid grid-rows-2">
+                      <div class="row-span-1 text-base">ETA</div>
+                      <div class="row-span-1 text-unhover text-sm">LNewJeans</div>
+                    </div>
+                  </td>
+                  <td>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                      />
+                    </svg>
+                  </td>
+                  <td class="text-unhover">2:31</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-
-        <div class="flex overflow-x-auto w-full relative mt-3">
-          <table class="table">
-            <!-- head -->
-            <thead>
-              <tr>
-                <th>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M5,9H20M4,15H19M17.52,3,12.69,21M6.48,21,11.31,3" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5;"/>
-                  </svg>
-                </th>
-                <th><span class="text-lg font-extralight text-white">Title</span></th>
-                <th></th>
-                <th>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-6 h-6 text-white" viewBox="0 0 64 64" stroke="#ffffff">
-                    <circle cx="32" cy="32" r="24" style="stroke-width: 4;"/>
-                    <polyline points="40 44 32 32 32 16" style="stroke-linecap: round; stroke-linejoin: round; stroke-width: 4;"/>
-                  </svg>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- row 1 -->
-              <tr>
-                <th><span class="text-lg text-white">1</span></th>
-                <td><span class="text-lg text-white">GAM3 BO1</span><br><span class="text-sm text-gray-500">SEVENTEEN</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">3:09</span></td>
-              </tr>
-              <!-- row 2 -->
-              <tr>
-                <th><span class="text-lg text-white">2</span></th>
-                <td><span class="text-lg text-white">JULIETTE! (Feat. UMI)</span><br><span class="text-sm text-gray-500">pH-1, UMI</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">3:06</span></td>
-              </tr>
-              <!-- row 3 -->
-              <tr>
-                <th><span class="text-lg text-white">3</span></th>
-                <td><span class="text-lg text-white">Fire</span><br><span class="text-sm text-gray-500">SEVENTEEN</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">2:38</span></td>
-              </tr>
-              <!-- row 4 -->
-              <tr>
-                <th><span class="text-lg text-white">4</span></th>
-                <td><span class="text-lg text-white">GODS</span><br><span class="text-sm text-gray-500">League of Legends, NewJeans</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">3:40</span></td>
-              </tr>
-              <!-- row 5 -->
-              <tr>
-                <th><span class="text-lg text-white">5</span></th>
-                <td><span class="text-lg text-white">Lightsaber</span><br><span class="text-sm text-gray-500">EXO</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">3:04</span></td>
-              </tr>
-              <!-- row 6 -->
-              <tr>
-                <th><span class="text-lg text-white">6</span></th>
-                <td><span class="text-lg text-white">Ash</span><br><span class="text-sm text-gray-500">SEVENTEEN</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">3:21</span></td>
-              </tr>
-              <!-- row 7 -->
-              <tr>
-                <th><span class="text-lg text-white">7</span></th>
-                <td><span class="text-lg text-white">Perfect Night</span><br><span class="text-sm text-gray-500">LE SSERAFIM</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">2:39</span></td>
-              </tr>
-              <!-- row 8 -->
-              <tr>
-                <th><span class="text-lg text-white">8</span></th>
-                <td><span class="text-lg text-white">ETA</span><br><span class="text-sm text-gray-500">NewJeans</span></td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 7 7"><path style="fill: #ffffff;" d="m 2.1835938,0.72070302 c -0.4271174,0 -0.8546461,0.16323989 -1.1796876,0.48828128 -0.65008277,0.6500828 -0.65008277,1.707339 0,2.3574219 l 1.984375,1.9843749 a 0.26460976,0.26460976 0 0 0 0.373047,0 L 5.3457031,3.5664062 c 0.6500828,-0.6500829 0.6500828,-1.7073391 0,-2.3574219 C 4.7473328,0.61061415 3.8291869,0.62768703 3.1757812,1.1308593 2.8770626,0.90036497 2.5432669,0.72070302 2.1835938,0.72070302 Z m 0,0.52539068 c 0.2902341,-1e-7 0.5800571,0.1113071 0.8046874,0.3359374 a 0.26460976,0.26460976 0 0 0 0.373047,0 c 0.4492606,-0.4492607 1.1620671,-0.4492608 1.611328,0 0.4492609,0.4492608 0.4492609,1.1620674 0,1.6113282 L 3.1757812,4.9902344 1.3769531,3.1933593 c -0.44926078,-0.4492608 -0.44926078,-1.1620674 0,-1.6113282 C 1.6015836,1.3574007 1.8933596,1.2460937 2.1835938,1.2460937 Z"/>
-                  </svg>
-                </td>
-                <td><span class="text-lg text-white">2:31</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
         </div>
       </div>
     </div>
