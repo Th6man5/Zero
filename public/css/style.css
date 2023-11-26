@@ -769,6 +769,12 @@ html {
     --tw-bg-opacity: 1;
     background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
   }
+
+  .table-zebra tr.hover:hover,
+  .table-zebra tr.hover:nth-child(even):hover {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
+  }
 }
 
 .card {
@@ -1636,6 +1642,10 @@ html {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -1767,6 +1777,10 @@ html {
   display: none;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -1799,8 +1813,16 @@ html {
   height: 1.25rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .h-6 {
   height: 1.5rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .h-full {
@@ -1813,14 +1835,6 @@ html {
 
 .h-sidebar {
   height: 97%;
-}
-
-.h-72 {
-  height: 18rem;
-}
-
-.h-56 {
-  height: 14rem;
 }
 
 .w-10 {
@@ -1871,12 +1885,12 @@ html {
   width: 16rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-72 {
   width: 18rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-1 {
@@ -2503,10 +2517,6 @@ html {
 
   .lg\:mr-20 {
     margin-right: 5rem;
-  }
-
-  .lg\:mr-2 {
-    margin-right: 0.5rem;
   }
 
   .lg\:mr-28 {
