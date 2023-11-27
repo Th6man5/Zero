@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "docs-serve",
+			"path": "vendor/twbs/bootstrap-icons",
+			"problemMatcher": [
+				"$eslint-compact"
+			],
+			"label": "npm: docs-serve - vendor/twbs/bootstrap-icons",
+			"detail": "hugo server --port 4000 --disableFastRender"
+		}
+	]
+}
