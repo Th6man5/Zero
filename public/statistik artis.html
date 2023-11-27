@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html class="h-full bg-black">
   <head>
@@ -288,4 +289,289 @@
     <script src="js/sidebarMobile.js"></script>
     <script src="js/carousel.js"></script>
   </body>
+=======
+<!DOCTYPE html>
+<html class="h-full bg-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Statistik Artis</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+      * {
+        font-family: "kanit";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebarWrap" class="sm:p-2">
+      <aside id="sidebar" class="fixed z-40 w-64 h-sidebar bg-primary hidden sm:block pt-0 transition-all rounded-lg mt-1">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-primary rounded-lg">
+          <!-- Tombol Buat Sidebar tutup-->
+
+          <div class="flex items-center sm:hidden mb-5 mt-5" id="sidebarButClose">
+            <a onclick="mobileSidebarClose()" class="flex ms-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-grid-fill w-6 h-6 text-gray-500 ease-in hover:text-white transition-all" viewBox="0 0 16 16">
+                <path
+                  d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- END Sidebar Button -->
+
+          <!-- HOME -->
+          <hr class="bg-coba border-none h-1 rounded-2xl sm:hidden" />
+          <ul class="space-y-2 font-medium mb-5 mt-5">
+            <li>
+              <a href="home.html" class="flex items-center p-2 text-gray-500 hover:text-white hover:text-lg transition-all rounded-lg hover:bg-secondary group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
+                  <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"
+                  />
+                </svg>
+                <span class="ms-3">Home</span>
+              </a>
+            </li>
+            <!-- END Home-->
+
+            <!-- Explore -->
+            <li>
+              <a href="explore.html" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group transition-all hover:text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-compass-fill flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
+                  <path d="M15.5 8.516a7.5 7.5 0 1 1-9.462-7.24A1 1 0 0 1 7 0h2a1 1 0 0 1 .962 1.276 7.503 7.503 0 0 1 5.538 7.24zm-3.61-3.905L6.94 7.439 4.11 12.39l4.95-2.828 2.828-4.95z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Explore</span>
+              </a>
+            </li>
+            <!-- End Explore -->
+
+            <li>
+              <a href="news.html" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-card-heading flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
+                  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                  <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">News</span>
+              </a>
+            </li>
+          </ul>
+          <hr class="bg-coba border-none h-1 rounded-2xl" />
+          <ul class="space-y-2 font-medium mt-5">
+            <li>
+              <a href="#" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary hover:text-lg transition-all group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-list flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
+                  <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                  <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+                  <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+                  <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">My Playlist</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+    <div class="sm:px-4 sm:ml-64 pb-3">
+      <!-- NAVBAR -->
+      <nav class="z-30 w-full bg-primary rounded-md sticky top-0 sm:relative">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <!-- Mobile VER Progress (MORE)-->
+
+            <div class="flex items-center sm:hidden" id="sidebarButClose">
+              <a onclick="mobileSidebar()" class="flex ms-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-grid-fill w-6 h-6 text-white ease-in hover:text-gray-500 transition-all" viewBox="0 0 16 16">
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex items-center">
+              <a href="home.html" class="flex lg:mx-6">
+                <svg width="100" height="38" viewBox="0 0 124 38" fill="none" class="" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M88.751 14.6707C88.751 15.8611 88.6039 16.9245 88.3096 17.8608C88.0154 18.7971 87.6141 19.6264 87.1058 20.3487C86.6109 21.0576 86.0358 21.6662 85.3804 22.1744C84.7249 22.6827 84.0361 23.104 83.3138 23.4384C82.6049 23.7595 81.8826 23.9935 81.147 24.1407C80.4247 24.2878 79.7425 24.3614 79.1005 24.3614L89.995 33.7712H81.9294L71.055 24.3614H67.3031V19.1448H79.1005C79.7559 19.0913 80.3511 18.9576 80.8861 18.7436C81.4345 18.5162 81.9027 18.2152 82.2906 17.8407C82.6918 17.4662 82.9995 17.0181 83.2135 16.4965C83.4275 15.9614 83.5345 15.3528 83.5345 14.6707V11.3803C83.5345 11.086 83.4944 10.8653 83.4141 10.7182C83.3473 10.5577 83.2536 10.444 83.1332 10.3771C83.0262 10.2968 82.9059 10.25 82.7721 10.2366C82.6517 10.2233 82.538 10.2166 82.431 10.2166H65.2165V33.7712H60V7.62838C60 7.26724 60.0669 6.92616 60.2006 6.60514C60.3344 6.28413 60.515 6.00324 60.7424 5.76247C60.9831 5.52171 61.264 5.33445 61.585 5.2007C61.906 5.06694 62.2538 5.00006 62.6283 5.00006H82.431C83.5947 5.00006 84.5778 5.21407 85.3804 5.64209C86.1829 6.05674 86.8316 6.58508 87.3265 7.22711C87.8348 7.85577 88.1959 8.53793 88.4099 9.27359C88.6373 10.0093 88.751 10.6981 88.751 11.3401V14.6707Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M53.7753 22.0139H37.3031V16.7573H53.7753V22.0139ZM56.1227 33.7712H37.3031C36.5808 33.7712 35.7917 33.6441 34.9356 33.3899C34.0796 33.1358 33.2837 32.7212 32.5481 32.146C31.8258 31.5575 31.2172 30.8018 30.7223 29.8788C30.2408 28.9425 30 27.7989 30 26.448V7.62838C30 7.26724 30.0669 6.92616 30.2006 6.60514C30.3344 6.28413 30.515 6.00324 30.7424 5.76247C30.9831 5.52171 31.264 5.33445 31.585 5.2007C31.906 5.06694 32.2538 5.00006 32.6283 5.00006H56.1227V10.2166H35.2165V26.448C35.2165 27.1301 35.3971 27.6518 35.7582 28.0129C36.1194 28.3741 36.6477 28.5546 37.3432 28.5546H56.1227V33.7712Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M26.1942 6.56495C26.3949 7.0331 26.4551 7.528 26.3748 8.04966C26.2946 8.55793 26.0805 8.99264 25.7328 9.35378L8.51827 28.5546H26.1541V33.7711H2.63966C2.13139 33.7711 1.65655 33.6306 1.21515 33.3498C0.78713 33.0555 0.466113 32.6743 0.252103 32.2061C0.0247159 31.738 -0.0488503 31.2498 0.0314038 30.7415C0.125034 30.2332 0.339044 29.7918 0.673437 29.4173L17.9281 10.2165H0.252103V5H23.8067C24.315 5 24.7831 5.14713 25.2111 5.4414C25.6525 5.72229 25.9802 6.09681 26.1942 6.56495Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M118.938 25.9376C118.938 27.0767 118.376 27.5395 117.25 27.5395L101.911 27.5395V22.0949L94 30.1013L101.805 38L101.911 32.663L120.625 32.663C122.488 32.663 124 31.1328 124 29.2474V14.5532L118.938 19.6767V25.9376ZM99.1345 12.0629C99.1345 10.9238 99.6964 10.461 100.822 10.461L116.089 10.4605V15.9051L124 7.89876L116.195 2.70247e-05L116.089 5.33701L97.447 5.33745C95.584 5.33745 94.072 6.86767 94.072 8.75312V23.4473L99.1345 18.3238V12.0629Z"
+                    fill="#5CDB94"
+                  />
+                </svg>
+
+                <!-- <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap"></span> -->
+              </a>
+            </div>
+            <!-- End Logo-->
+
+            <!-- Search Bar -->
+            <div class="flex-grow items-center ms-2 me-4 relative sm:block hidden">
+              <input type="text" class="pl-10 pr-4 py-2 border rounded-lg w-full bg-white" placeholder="Search..." />
+
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search w-5 h-5" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+              </div>
+            </div>
+            <!-- End Search Bar -->
+
+            <!-- Profile Picture -->
+            <div class="flex items-center">
+              <button class="avatar dropdown dropdown-end focus:ring-white focus:ring-2 rounded-full transition-all">
+                <div class="w-11 rounded-full">
+                  <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                </div>
+
+                <ul class="dropdown-content z-50 menu p-3 mt-3 shadow bg-black rounded-box w-52">
+                  <li><a class="hover:text-white rounded-t-xl rounded-b-none">Profile</a></li>
+                  <li class="hover:bg-red-700 rounded-b-xl"><a class="hover:text-white">Logout</a></li>
+                </ul>
+              </button>
+            </div>
+            <!-- End Profile -->
+          </div>
+        </div>
+      </nav>
+      <!-- END NAVBAR -->
+
+      <div class="p-4 bg-primary rounded-lg mt-4">
+        <div class="h-96 bg-primary rounded-lg flex overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full object-cover rounded-lg" />
+          <div class="p-4 absolute bottom-10">
+            <h2 class="text-6xl font-medium text-white">Tame Impala</h2>
+          </div>
+          <div class="p-4 absolute bottom-0">
+            <h2 class="text-lg font-medium text-white">23.287.378 monthly listener</h2>
+          </div>
+          <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Musician</div>
+        </div>
+
+        <h1 class="text-3xl text-accent font-bold my-4">Popular</h1>
+
+        <div class="overflow-x-auto w-full bg-primary relative mt-3">
+          <table class="table text-white">
+            <!-- head -->
+            <thead>
+              <tr class="text-white text-lg">
+                <th class="w-5 font-light">#</th>
+                <th class="font-light">Title</th>
+                <th class="w-24"></th>
+                <th class="w-16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                  </svg>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- row 1 -->
+              <tr>
+                <th>1</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">GAM3 BO1</div>
+                    <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">3:09</td>
+              </tr>
+              <!-- row 2 -->
+              <tr>
+                <th>2</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">JULIETTE (Feat. UMI)</div>
+                    <div class="row-span-1 text-unhover text-sm">pH-1, UMI</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">3:06</td>
+              </tr>
+              <!-- row 3 -->
+              <tr>
+                <th>3</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">Fire</div>
+                    <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">2:38</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Albums</h1>
+
+          <div class="flex felx-row gap-4">
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            
+          </div>
+
+      </div>
+
+    </div>
+    <script src="js/sidebarMobile.js"></script>
+    <script src="js/carousel.js"></script>
+  </body>
+>>>>>>> ba67047573608a3b2dc93377c4f4e3607587cd09
 </html>
