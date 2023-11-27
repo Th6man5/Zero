@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Playlist</title>
+    <title>Statistik Artis</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
       * {
@@ -157,186 +157,135 @@
       </nav>
       <!-- END NAVBAR -->
 
-        <div class="p-4 bg-primary rounded-lg mt-4">
-          <div class="bg-gradient-to-b from-[#02209A] to-[#8892B2] rounded-lg flex relative">
-            <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-52 rounded-l-lg" />
-            <div class="p-4 md:flex">
-              <h2 class="pl-7 text-6xl font-medium text-white">GameBoi</h2>
-              <ul class="flex text-white mt-3 ms-3 absolute bottom-8 left-60">
-                  <img class="w-6 h-6 mr-4 object-cover rounded-full overflow-hidden" src="https://images.unsplash.com/photo-1521156078952-670635fe748f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-                  By: Tim Burton
-              </ul>
-            </div>
-            <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Playlist</div>
+      <div class="p-4 bg-primary rounded-lg mt-4">
+        <div class="h-96 bg-primary rounded-lg flex overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full object-cover rounded-lg" />
+          <div class="p-4 absolute bottom-10">
+            <h2 class="text-6xl font-medium text-white">Tame Impala</h2>
           </div>
-
-          <div class="overflow-x-auto w-full bg-primary relative mt-3">
-            <table class="table text-white">
-              <!-- head -->
-              <thead>
-                <tr class="text-white text-lg">
-                  <th class="w-5 font-light">#</th>
-                  <th class="font-light">Title</th>
-                  <th class="w-24"></th>
-                  <th class="w-16">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
-                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                    </svg>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- row 1 -->
-                <tr>
-                  <th>1</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">GAM3 BO1</div>
-                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">3:09</td>
-                </tr>
-                <!-- row 2 -->
-                <tr>
-                  <th>2</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">JULIETTE (Feat. UMI)</div>
-                      <div class="row-span-1 text-unhover text-sm">pH-1, UMI</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">3:06</td>
-                </tr>
-                <!-- row 3 -->
-                <tr>
-                  <th>3</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">Fire</div>
-                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">2:38</td>
-                </tr>
-                <!-- row 4 -->
-                <tr>
-                  <th>4</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">GODS</div>
-                      <div class="row-span-1 text-unhover text-sm">League of Legends, NewJeans</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">3:40</td>
-                </tr>
-                <!-- row 5 -->
-                <tr>
-                  <th>5</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">Lightsaber</div>
-                      <div class="row-span-1 text-unhover text-sm">EXO</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">3:04</td>
-                </tr>
-                <!-- row 6 -->
-                <tr>
-                  <th>6</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">Ash</div>
-                      <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">3:21</td>
-                </tr>
-                <!-- row 7 -->
-                <tr>
-                  <th>7</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">Perfect Night</div>
-                      <div class="row-span-1 text-unhover text-sm">LE SSERAFIM</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">2:39</td>
-                </tr>
-                <!-- row 8 -->
-                <tr>
-                  <th>8</th>
-                  <td>
-                    <div class="grid grid-rows-2">
-                      <div class="row-span-1 text-base">ETA</div>
-                      <div class="row-span-1 text-unhover text-sm">LNewJeans</div>
-                    </div>
-                  </td>
-                  <td>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                      />
-                    </svg>
-                  </td>
-                  <td class="text-unhover">2:31</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="p-4 absolute bottom-0">
+            <h2 class="text-lg font-medium text-white">23.287.378 monthly listener</h2>
           </div>
-
+          <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Musician</div>
         </div>
+
+        <h1 class="text-3xl text-accent font-bold my-4">Popular</h1>
+
+        <div class="overflow-x-auto w-full bg-primary relative mt-3">
+          <table class="table text-white">
+            <!-- head -->
+            <thead>
+              <tr class="text-white text-lg">
+                <th class="w-5 font-light">#</th>
+                <th class="font-light">Title</th>
+                <th class="w-24"></th>
+                <th class="w-16">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                  </svg>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- row 1 -->
+              <tr>
+                <th>1</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">GAM3 BO1</div>
+                    <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">3:09</td>
+              </tr>
+              <!-- row 2 -->
+              <tr>
+                <th>2</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">JULIETTE (Feat. UMI)</div>
+                    <div class="row-span-1 text-unhover text-sm">pH-1, UMI</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">3:06</td>
+              </tr>
+              <!-- row 3 -->
+              <tr>
+                <th>3</th>
+                <td>
+                  <div class="grid grid-rows-2">
+                    <div class="row-span-1 text-base">Fire</div>
+                    <div class="row-span-1 text-unhover text-sm">SEVENTEEN</div>
+                  </div>
+                </td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </td>
+                <td class="text-unhover">2:38</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Albums</h1>
+
+          <!-- <div class="flex felx-row gap-4">
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="w-48 h-48 bg-secondary rounded-lg flex overflow-hidden"></div>
+              <div class="card-body w-48 p-1 bg-secondary mt-4 rounded-lg">
+                <h1 class="text-center text-white text-lg tracking-wider">Currents</h1>
+              </div>
+            </div> -->
+
+            <div class="grid grid-rows-2 grid-cols-2 gap-2">
+              <div class="w-48 h-48 rounded-lg bg-secondary text-white text-lg">1</div>
+              <div class="w-48 h-48 rounded-lg bg-secondary text-white text-lg">2</div>
+              <div class="w-48 h-48 rounded-lg bg-secondary text-white text-lg">3</div>
+              <div class="w-48 h-48 rounded-lg bg-secondary text-white text-lg">4</div>
+            </div>
+            
+          </div>
+
       </div>
+
     </div>
+    <script src="js/sidebarMobile.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
