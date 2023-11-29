@@ -152,11 +152,21 @@
       </nav>
       <div class="p-4 rounded-lg mt-4 h-screen bg-gray-8"> 
         <div class="grid grid-cols-2 gap-4 mb-4 h-96">
-          <div class="flex items-center justify-center rounded w-96 h-96">
-            <img src="https://i.ibb.co/Rjn2DPc/Rectangle-28.png" alt="Rectangle-28" class="flex items-center justify-center rounded w-96 h-96" >
-          </div>
-          <div class="flex rounded w-96 h-96 bg-gray-800">
-            <div class="flex flex-col mx-6 mt-4">
+          
+            <div class="relative w-96">
+              <img src="https://i.ibb.co/Rjn2DPc/Rectangle-28.png" alt="Rectangle-28" class="flex items-center justify-center rounded w-full h-96">
+              <div class="absolute p-4 bottom-0 w-full">
+                <div class="px-4 py-2 opacity-80 bg-white rounded-md flex">
+                    <audio src=""></audio>
+                </div>   
+              </div>
+                   
+            </div>
+                
+           
+        
+          <div class="flex rounded w-96 h-96">
+            <div class="flex flex-col  ">
               <div class="text-white text-lg">The Less I Know The Better</div>
               <div class="text-gray-500 text-sm">Tame Impala</div>
               <div class="text-gray-500 text-sm">Current</div>
@@ -168,14 +178,23 @@
                     </svg>
                 </div>
               </div>
-              <div class="text-white text-sm h-fit">
-                <p class="mt-4">Someone said they left together</p>
+              <div class="text-white text-sm h-fit w-2/3">
+                <div class="leading-loose">
+                  Someone said they left together
+                  I ran out the door to get her
+                  She was holding hands with Trevor
+                  Not the greatest feeling ever
+                  Said, "Pull yourself together
+                  You should try your luck with Heather"
+                  Then I heard they slept together
+                </div>
+                <!-- <p class="mt-4">Someone said they left together</p>
                 <p class="mt-1">I ran out the door to get her</p>
                 <p class="mt-1">She was holding hands with Trevor</p>
                 <p class="mt-1">Not the greatest feeling ever</p>
                 <p class="mt-1">Said, "Pull yourself together</p>
                 <p class="mt-1">You should try your luck with Heather"</p>
-                <p class="mt-1">Then I heard they slept together</p>
+                <p class="mt-1">Then I heard they slept together</p> -->
               </div>
             </div>
           </div>
@@ -199,8 +218,6 @@
                 </svg>
               </div>
             </div>
-          </div>
-          <div class="flex h-10 rounded">
           </div>
         </div>
         <div class="overflow-x-auto w-full relative mt-3">
