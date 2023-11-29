@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Album | Zero</title>
+    <link rel="stylesheet" href="css/scroll.css" />
+    <title>Current Video | Zero</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
     <style>
@@ -92,6 +93,7 @@
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
             <!-- Mobile VER Progress (MORE)-->
+
             <div class="flex items-center sm:hidden" id="sidebarButClose">
               <a onclick="mobileSidebar()" class="flex ms-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-grid-fill w-6 h-6 text-white ease-in hover:text-gray-500 transition-all" viewBox="0 0 16 16">
@@ -104,8 +106,8 @@
 
             <!-- Logo -->
             <div class="flex items-center">
-              <a href="#" class="flex lg:mx-6">
-                <svg width="100" height="38" viewBox="0 0 124 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a href="home.html" class="flex lg:mx-6">
+                <svg width="100" height="38" viewBox="0 0 124 38" fill="none" class="" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M88.751 14.6707C88.751 15.8611 88.6039 16.9245 88.3096 17.8608C88.0154 18.7971 87.6141 19.6264 87.1058 20.3487C86.6109 21.0576 86.0358 21.6662 85.3804 22.1744C84.7249 22.6827 84.0361 23.104 83.3138 23.4384C82.6049 23.7595 81.8826 23.9935 81.147 24.1407C80.4247 24.2878 79.7425 24.3614 79.1005 24.3614L89.995 33.7712H81.9294L71.055 24.3614H67.3031V19.1448H79.1005C79.7559 19.0913 80.3511 18.9576 80.8861 18.7436C81.4345 18.5162 81.9027 18.2152 82.2906 17.8407C82.6918 17.4662 82.9995 17.0181 83.2135 16.4965C83.4275 15.9614 83.5345 15.3528 83.5345 14.6707V11.3803C83.5345 11.086 83.4944 10.8653 83.4141 10.7182C83.3473 10.5577 83.2536 10.444 83.1332 10.3771C83.0262 10.2968 82.9059 10.25 82.7721 10.2366C82.6517 10.2233 82.538 10.2166 82.431 10.2166H65.2165V33.7712H60V7.62838C60 7.26724 60.0669 6.92616 60.2006 6.60514C60.3344 6.28413 60.515 6.00324 60.7424 5.76247C60.9831 5.52171 61.264 5.33445 61.585 5.2007C61.906 5.06694 62.2538 5.00006 62.6283 5.00006H82.431C83.5947 5.00006 84.5778 5.21407 85.3804 5.64209C86.1829 6.05674 86.8316 6.58508 87.3265 7.22711C87.8348 7.85577 88.1959 8.53793 88.4099 9.27359C88.6373 10.0093 88.751 10.6981 88.751 11.3401V14.6707Z"
                     fill="white"
@@ -133,7 +135,7 @@
             <div class="flex-grow items-center ms-2 me-4 relative sm:block hidden">
               <input type="text" class="pl-10 pr-4 py-2 border rounded-lg w-full bg-white" placeholder="Search..." />
 
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search w-5 h-5" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
@@ -158,116 +160,242 @@
           </div>
         </div>
       </nav>
-      <!-- NAVBAR END -->
-
-      <div class="p-4 bg-primary rounded-lg mt-4">
-        <div class="bg-gradient-to-t from-current1 to-current2 rounded-lg flex relative overflow-hidden">
-          <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="w-52 rounded-l-lg" />
-          <div class="p-4 md:flex">
-            <h2 class="pl-7 text-6xl font-medium text-white">Currents</h2>
-            <ul class="text-white mt-3 ms-3">
-              <li>Tame Impala</li>
-              <li>2015</li>
-            </ul>
+      <!-- END NAVBAR -->
+      <div class="bg-primary p-4 rounded-lg mt-4 h-full">
+        <div class="flex mb-4 h-96 bg-black2 rounded-lg">
+          <div>
+            <video controls class="w-full h-full rounded-l-lg">
+              <source src="video/test.mp4" type="video/mp4" />
+            </video>
           </div>
-          <div class="absolute bg-accent top-0 right-0 rounded-bl-lg rounded-tr-lg p-2 px-4 text-white">Album</div>
+          <div class="flex flex-col p-8 gap-5">
+            <p class="text-unhover text-sm">109.542.883 x</p>
+            <div class="flex flex-col">
+              <h3 class="text-white text-2xl">The Less I Know The Better</h3>
+              <h3 class="text-unhover">Tame Impala</h3>
+            </div>
+          </div>
+          <div class="p-8 mt-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill w-5 h-5 hover:text-white text-unhover transition-all" viewBox="0 0 16 16">
+              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+            </svg>
+          </div>
         </div>
-        <div class="flex my-4 justify-end">
-          <a class="p-2 px-6 bg-gradient-to-t from-primary to-secondary rounded-xl shadow-lg text-white" href="ulasan.html">Album Rating</a>
-        </div>
-        <div class="overflow-x-auto w-full relative mt-3">
-          <table class="table text-white">
-            <!-- head -->
-            <thead>
-              <tr class="text-white text-lg">
-                <th class="w-5 font-light">#</th>
-                <th class="font-light">Title</th>
-                <th class="w-24"></th>
-                <th class="w-16">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- row 1 -->
-              <tr class="hover">
-                <th>1</th>
-                <td>
-                  <div class="grid grid-rows-2">
-                    <div class="row-span-1 text-base">Let It Happen</div>
-                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
-                  </div>
-                </td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+
+        <!-- <div class="flex gap-4 rounded w-1/3 justify-between">
+          <a class="bg-gradient-to-t from-primary to-secondary rounded-xl shadow-lg text-white transition-all w-36 p-2 text-center">Music Video</a>
+          <div class="flex items-center gap-3 text-white w-fit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg w-5 h-5" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+              />
+            </svg>
+          </div>
+        </div> -->
+
+        <div class="grid grid-cols-2 p-8">
+          <div class="grid grid-rows-6">
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
                     <path
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
                     />
                   </svg>
-                </td>
-                <td class="text-unhover">7:47</td>
-              </tr>
-              <!-- row 2 -->
-              <tr class="hover">
-                <th>2</th>
-                <td>
-                  <div class="grid grid-rows-2">
-                    <div class="row-span-1 text-base">Nangs</div>
-                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
-                  </div>
-                </td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                </div>
+              </div>
+            </div>
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
                     <path
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
                     />
                   </svg>
-                </td>
-                <td class="text-unhover">1:47</td>
-              </tr>
-              <!-- row 3 -->
-              <tr class="hover">
-                <th>3</th>
-                <td>
-                  <div class="grid grid-rows-2">
-                    <div class="row-span-1 text-base">The Moment</div>
-                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
-                  </div>
-                </td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                </div>
+              </div>
+            </div>
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
                     <path
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
                     />
                   </svg>
-                </td>
-                <td class="text-unhover">4:15</td>
-              </tr>
-              <!-- row 4 -->
-              <tr class="hover">
-                <th>4</th>
-                <td>
-                  <div class="grid grid-rows-2">
-                    <a href="audioPlayer.html" class="hover:underline decoration-solid">
-                      <div class="row-span-1 text-base">The Less I Know The Better</div>
-                    </a>
-                    <div class="row-span-1 text-unhover text-sm">Tame Impala</div>
-                  </div>
-                </td>
-                <td>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                </div>
+              </div>
+            </div>
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
                     <path
                       d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
                     />
                   </svg>
-                </td>
-                <td class="text-unhover">3:36</td>
-              </tr>
-            </tbody>
-          </table>
+                </div>
+              </div>
+            </div>
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex h-24">
+              <div class="w-48 h-24">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+              </div>
+              <div class="px-4 flex w-1/2">
+                <div class="flex flex-col">
+                  <h1 class="text-white text-lg">21</h1>
+                  <h2 class="text-unhover text-sm">Dean</h2>
+                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                </div>
+                <div class="mt-2 ml-auto text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
+                    <path
+                      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col bg-black2 rounded-lg">
+            <div class="p-4 shadow-2xl">
+              <div class="flex flex-col">
+                <h1 class="text-unhover">345 Comments</h1>
+                <div class="flex p-4">
+                  <div class="avatar">
+                    <div class="w-10 h-10 rounded-full">
+                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    </div>
+                  </div>
+                  <div class="ml-5 w-full flex flex-col">
+                    <textarea class="w-full rounded-2xl bg-white text-black p-3" name="" id="" cols="30" rows="3" placeholder="Add a comment..."></textarea>
+                  </div>
+                </div>
+                <div class="ml-auto px-4">
+                  <button class="p-1 rounded-xl bg-hijo w-fit px-5 text-black hover:bg-green-700 transition-all hover:text-white">Comment</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex">
+                <div class="dropdown dropdown-bottom dropdown-end ml-auto">
+                  <div tabindex="0" role="button" class="hover:text-white transition-all flex items-center gap-2">
+                    <h3>Sort by</h3>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-right w-6 h-6" viewBox="0 0 16 16">
+                      <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5m0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5m0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5" />
+                    </svg>
+                  </div>
+                  <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <li class="text-white shadow-xl"><a>Newest First</a></li>
+                    <li class="text-white shadow-xl"><a>Oldest</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex py-5 gap-5 items-center">
+                <div class="avatar self-start">
+                  <div class="w-10 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-3">
+                    <div class="text-white">@SukmaJohnson</div>
+                    <div class="text-unhover text-sm">7 hours ago</div>
+                  </div>
+                  <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
+                </div>
+              </div>
+
+              <div class="flex py-5 gap-5 items-center">
+                <div class="avatar self-start">
+                  <div class="w-10 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-3">
+                    <div class="text-white">@SukmaJohnson</div>
+                    <div class="text-unhover text-sm">7 hours ago</div>
+                  </div>
+                  <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
+                </div>
+              </div>
+
+              <div class="flex py-5 gap-5 items-center">
+                <div class="avatar self-start">
+                  <div class="w-10 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-3">
+                    <div class="text-white">@SukmaJohnson</div>
+                    <div class="text-unhover text-sm">7 hours ago</div>
+                  </div>
+                  <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
