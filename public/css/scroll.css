@@ -1,0 +1,23 @@
+/* width */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Track */
+.overflow-y-auto::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+}
+
+/* Handle */
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: black;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #8e8e8e;
+}
