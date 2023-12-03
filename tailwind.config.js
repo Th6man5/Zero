@@ -17,6 +17,7 @@ module.exports = {
         current1: "#201920",
         current2: "#533B5E",
         ulasan: "#1D1B1B",
+        bar: "#BCBCBC",
       },
       height: {
         sidebar: "97%",
