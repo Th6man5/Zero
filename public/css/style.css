@@ -1799,8 +1799,13 @@ html {
   pointer-events: none;
 }
 
+<<<<<<< HEAD
+.static {
+  position: static;
+=======
 .pointer-events-auto {
   pointer-events: auto;
+>>>>>>> a19eef5bb732111e2d0dd85cf6eecc9fe380a038
 }
 
 .fixed {
@@ -2212,10 +2217,13 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+<<<<<<< HEAD
+=======
 .cursor-pointer {
   cursor: pointer;
 }
 
+>>>>>>> a19eef5bb732111e2d0dd85cf6eecc9fe380a038
 .resize {
   resize: both;
 }
