@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/scroll.css" />
+    <link rel="stylesheet" href="css/audiobar.css" />
     <title>Current Video | Zero</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
@@ -163,10 +163,92 @@
       <!-- END NAVBAR -->
       <div class="bg-primary p-4 rounded-lg mt-4 h-full">
         <div class="flex mb-4 h-96 bg-black2 rounded-lg">
-          <div>
-            <video controls class="w-full h-full rounded-l-lg">
-              <source src="video/test.mp4" type="video/mp4" />
+          <div class="relative">
+            <video class="w-full h-full rounded-l-lg" id="video">
+              <source src="video/thelessiknow.mp4" type="video/mp4" />
             </video>
+
+            <div class="absolute p-4 bottom-0 w-full">
+              <div class="controls flex items-center py-4 opacity-80 bg-bar rounded-md gap-4 px-4" id="videobar">
+                <!-- Skip Left -->
+                <div class="cursor-pointer">
+                  <svg class="w-4 h-4 rotate-180" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 3.61127V13.3902C1 15.3929 3.17647 16.6497 4.91357 15.6483L9.15414 13.2061L13.3947 10.7538C15.1318 9.75237 15.1318 7.24891 13.3947 6.24756L9.15414 3.79519L4.91357 1.35305C3.17647 0.351663 1 1.59828 1 3.61127Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M17.8398 14.8104V2.18066" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <!-- Play -->
+                <div onclick="playPause()" class="cursor-pointer">
+                  <svg class="w-4 h-4 playIcon poin" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="play">
+                    <path
+                      d="M11.4229 6.07395C12.7101 6.87843 13.3537 7.28066 13.5744 7.79571C13.7672 8.24542 13.7672 8.75457 13.5744 9.20436C13.3537 9.71933 12.7101 10.1216 11.4229 10.9261L5.37722 14.7047C3.94859 15.5976 3.23427 16.044 2.64479 15.9966C2.13097 15.9553 1.65996 15.6943 1.35261 15.2804C1 14.8057 1 13.9633 1 12.2786V4.72144C1 3.03672 1 2.19438 1.35261 1.71961C1.65996 1.30578 2.13097 1.04473 2.64479 1.00342C3.23427 0.956031 3.94859 1.40248 5.37722 2.29538L11.4229 6.07395Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Skip Righdt -->
+                <div class="cursor-pointer">
+                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 3.61127V13.3902C1 15.3929 3.17647 16.6497 4.91357 15.6483L9.15414 13.2061L13.3947 10.7538C15.1318 9.75237 15.1318 7.24891 13.3947 6.24756L9.15414 3.79519L4.91357 1.35305C3.17647 0.351663 1 1.59828 1 3.61127Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M17.8398 14.8104V2.18066" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <!-- Repeat -->
+                <div class="cursor-pointer">
+                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="repeat">
+                    <path
+                      d="M15.0625 1L17.875 3.8125M17.875 3.8125L15.0625 6.625M17.875 3.8125H4.75C2.67893 3.8125 1 5.49143 1 7.5625M3.8125 16L1 13.1875M1 13.1875L3.8125 10.375M1 13.1875H14.125C16.196 13.1875 17.875 11.5085 17.875 9.4375"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Progress bar -->
+                <input type="range" value="0" id="progress" />
+
+                <!-- Full -->
+                <div class="cursor-pointer">
+                  <svg class="w-4 h-4" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="fullscreen">
+                    <path
+                      d="M1 5.6875V2.5C1 1.97495 1 1.71242 1.10218 1.51188C1.19207 1.33548 1.33548 1.19207 1.51188 1.10219C1.71242 1 1.97495 1 2.5 1H5.6875M1 11.3125V14.5C1 15.0251 1 15.2876 1.10218 15.4881C1.19207 15.6646 1.33548 15.8079 1.51188 15.8978C1.71242 16 1.97495 16 2.5 16H5.6875M11.3125 1H14.5C15.0251 1 15.2876 1 15.4881 1.10218C15.6646 1.19207 15.8079 1.33548 15.8978 1.51188C16 1.71242 16 1.97495 16 2.5V5.6875M16 11.3125V14.5C16 15.0251 16 15.2876 15.8978 15.4881C15.8079 15.6646 15.6646 15.8079 15.4881 15.8978C15.2876 16 15.0251 16 14.5 16H11.3125"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <!-- More -->
+                <div class="cursor-pointer">
+                  <svg class="w-4 h-4" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16671 1.66667C9.16671 2.58717 8.42054 3.33333 7.50004 3.33333C6.57954 3.33333 5.83337 2.58717 5.83337 1.66667C5.83337 0.746167 6.57954 0 7.50004 0C8.42054 0 9.16671 0.746167 9.16671 1.66667Z" fill="black" />
+                    <path d="M15.0001 1.66667C15.0001 2.58717 14.2539 3.33333 13.3334 3.33333C12.4129 3.33333 11.6667 2.58717 11.6667 1.66667C11.6667 0.746167 12.4129 0 13.3334 0C14.2539 0 15.0001 0.746167 15.0001 1.66667Z" fill="black" />
+                    <path d="M3.33333 1.66667C3.33333 2.58717 2.58714 3.33333 1.66667 3.33333C0.746192 3.33333 0 2.58717 0 1.66667C0 0.746167 0.746192 0 1.66667 0C2.58714 0 3.33333 0.746167 3.33333 1.66667Z" fill="black" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="flex flex-col p-8 gap-5">
             <p class="text-unhover text-sm">109.542.883 x</p>
@@ -175,7 +257,7 @@
               <h3 class="text-unhover">Tame Impala</h3>
             </div>
           </div>
-          <div class="p-8 mt-auto">
+          <div class="p-8 mt-auto ml-auto">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill w-5 h-5 hover:text-white text-unhover transition-all" viewBox="0 0 16 16">
               <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
             </svg>
@@ -183,10 +265,11 @@
         </div>
 
         <div class="grid grid-cols-2 p-8">
+          <!-- Video recomend -->
           <div class="grid grid-rows-6">
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://i.scdn.co/image/ab67616d0000b27318974569625e8449a5497ef3" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
@@ -205,13 +288,13 @@
             </div>
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://i.ytimg.com/vi/sZvujrn-AKU/sddefault.jpg" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
-                  <h1 class="text-white text-lg">21</h1>
-                  <h2 class="text-unhover text-sm">Dean</h2>
-                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                  <h1 class="text-white text-lg">Light It Up</h1>
+                  <h2 class="text-unhover text-sm">Gemini</h2>
+                  <h3 class="text-unhover mt-auto text-sm">123.498 x</h3>
                 </div>
                 <div class="mt-2 ml-auto text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
@@ -224,13 +307,13 @@
             </div>
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://www.yesstyle.com/blog/wp-content/uploads/2021/04/1092760048-e1619247067695.jpg" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
-                  <h1 class="text-white text-lg">21</h1>
-                  <h2 class="text-unhover text-sm">Dean</h2>
-                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                  <h1 class="text-white text-lg">Water Color</h1>
+                  <h2 class="text-unhover text-sm">Wheein</h2>
+                  <h3 class="text-unhover mt-auto text-sm">235.883 x</h3>
                 </div>
                 <div class="mt-2 ml-auto text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
@@ -243,13 +326,13 @@
             </div>
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://i.ytimg.com/vi/fHR5eRBS2LY/mqdefault.jpg" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
-                  <h1 class="text-white text-lg">21</h1>
-                  <h2 class="text-unhover text-sm">Dean</h2>
-                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                  <h1 class="text-white text-lg">True Lover</h1>
+                  <h2 class="text-unhover text-sm">Baek Yerin</h2>
+                  <h3 class="text-unhover mt-auto text-sm">72.927 x</h3>
                 </div>
                 <div class="mt-2 ml-auto text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
@@ -262,13 +345,13 @@
             </div>
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://images.genius.com/b849ca007bdddaa71d5c151364725961.823x823x1.png" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
-                  <h1 class="text-white text-lg">21</h1>
-                  <h2 class="text-unhover text-sm">Dean</h2>
-                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                  <h1 class="text-white text-lg">Summer</h1>
+                  <h2 class="text-unhover text-sm">The Volunteers</h2>
+                  <h3 class="text-unhover mt-auto text-sm">22.467 x</h3>
                 </div>
                 <div class="mt-2 ml-auto text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
@@ -281,13 +364,13 @@
             </div>
             <div class="flex h-24">
               <div class="w-48 h-24">
-                <img src="https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79" class="rounded-lg w-full h-full object-cover" />
+                <img src="https://i.scdn.co/image/ab67616d0000b273b7fd1b534c02e2426b63b345" class="rounded-lg w-full h-full object-cover" />
               </div>
               <div class="px-4 flex w-1/2">
                 <div class="flex flex-col">
-                  <h1 class="text-white text-lg">21</h1>
-                  <h2 class="text-unhover text-sm">Dean</h2>
-                  <h3 class="text-unhover mt-auto text-sm">3.546.267 x</h3>
+                  <h1 class="text-white text-lg">Nerves</h1>
+                  <h2 class="text-unhover text-sm">DPR Ian</h2>
+                  <h3 class="text-unhover mt-auto text-sm">234.764 x</h3>
                 </div>
                 <div class="mt-2 ml-auto text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart w-4 h-4" viewBox="0 0 16 16">
@@ -299,6 +382,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Comment -->
           <div class="flex flex-col bg-black2 rounded-lg">
             <div class="p-4 shadow-2xl">
               <div class="flex flex-col">
@@ -306,7 +391,7 @@
                 <div class="flex p-4">
                   <div class="avatar">
                     <div class="w-10 h-10 rounded-full">
-                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     </div>
                   </div>
                   <div class="ml-5 w-full flex flex-col">
@@ -339,12 +424,12 @@
               <div class="flex py-5 gap-5 items-center">
                 <div class="avatar self-start">
                   <div class="w-10 rounded-full">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src="https://i.scdn.co/image/ab67616100005174cdce7620dc940db079bf4952" />
                   </div>
                 </div>
                 <div class="flex flex-col">
                   <div class="flex items-center gap-3">
-                    <div class="text-white">@SukmaJohnson</div>
+                    <div class="text-white">@ArianaGrand</div>
                     <div class="text-unhover text-sm">7 hours ago</div>
                   </div>
                   <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
@@ -354,13 +439,13 @@
               <div class="flex py-5 gap-5 items-center">
                 <div class="avatar self-start">
                   <div class="w-10 rounded-full">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src="https://i.pinimg.com/736x/6c/46/09/6c46092105d40a2e1bfbaadf4c66768d.jpg" />
                   </div>
                 </div>
                 <div class="flex flex-col">
                   <div class="flex items-center gap-3">
-                    <div class="text-white">@SukmaJohnson</div>
-                    <div class="text-unhover text-sm">7 hours ago</div>
+                    <div class="text-white">@LouisPatridge</div>
+                    <div class="text-unhover text-sm">7 days ago</div>
                   </div>
                   <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
                 </div>
@@ -369,13 +454,13 @@
               <div class="flex py-5 gap-5 items-center">
                 <div class="avatar self-start">
                   <div class="w-10 rounded-full">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_Dicaprio_Cannes_2019.jpg" />
                   </div>
                 </div>
                 <div class="flex flex-col">
                   <div class="flex items-center gap-3">
-                    <div class="text-white">@SukmaJohnson</div>
-                    <div class="text-unhover text-sm">7 hours ago</div>
+                    <div class="text-white">@OldLeonardo</div>
+                    <div class="text-unhover text-sm">A month ago</div>
                   </div>
                   <div class="text-white">Lorem ipsum dolor sit amet consectetur. Et velit mauris turpis integer potenti. Vel ornare in laoreet id urna. Dignissim ac vitae bibendum faucibus. Enim est augue ipsum lobortis ac nunc.</div>
                 </div>
@@ -385,5 +470,7 @@
         </div>
       </div>
     </div>
+    <script src="js/heart.js"></script>
+    <script src="js/video.js"></script>
   </body>
 </html>

@@ -165,14 +165,28 @@
       <div class="bg-primary p-4 rounded-lg mt-4 h-full">
         <div class="flex gap-10 mb-4 h-96">
           <div class="relative w-96">
-            <img src="https://i.ibb.co/Rjn2DPc/Rectangle-28.png" alt="Rectangle-28" class="flex items-center justify-center rounded w-full h-96" />
+            <img src="https://i.ibb.co/Rjn2DPc/Rectangle-28.png" alt="Rectangle-28" class="flex items-center justify-center rounded w-full h-96 transition-all" />
 
-            <audio controls id="song" style="display: none">
+            <audio id="song" class="hidden">
               <source src="audio/TheLessIKnowTheBetterAudio.mp3" type="audio/mpeg" />
             </audio>
 
+            <!-- Left -->
+            <a href="">
+              <svg class="w-8 h-8 absolute top-1/3 left-0 rotate-180" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L13.5 13.5L1 26" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <!-- Right -->
+            <a href="audioplayerlovelovelove.html">
+              <svg class="w-8 h-8 absolute top-1/3 right-0" viewBox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L13.5 13.5L1 26" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+
             <div class="absolute p-4 bottom-0 w-full">
               <div class="controls flex items-center py-4 opacity-80 bg-bar rounded-md gap-4 px-4">
+                <!-- Play -->
                 <div onclick="playPause()" class="cursor-pointer">
                   <svg class="w-4 h-4 playIcon poin" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="play">
                     <path
@@ -183,8 +197,9 @@
                     />
                   </svg>
                 </div>
+                <!-- Shuffle -->
                 <div class="cursor-pointer">
-                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="shuffle">
                     <path
                       d="M15.0625 1L17.875 3.8125M17.875 3.8125L15.0625 6.625M17.875 3.8125H14.125C13.2538 3.8125 12.8181 3.8125 12.4559 3.88456C10.9683 4.18046 9.80547 5.34332 9.50959 6.83087C9.4375 7.19312 9.4375 7.62878 9.4375 8.5C9.4375 9.37122 9.4375 9.80688 9.36541 10.1691C9.06953 11.6567 7.90666 12.8195 6.41909 13.1154C6.05685 13.1875 5.62123 13.1875 4.75 13.1875H1M15.0625 16L17.875 13.1875M17.875 13.1875L15.0625 10.375M17.875 13.1875H14.125C13.2538 13.1875 12.8181 13.1875 12.4559 13.1154C12.3866 13.1016 12.3179 13.086 12.25 13.0684M1 3.8125H4.75C5.62123 3.8125 6.05685 3.8125 6.41909 3.88456C6.48845 3.89836 6.55711 3.91403 6.625 3.93154"
                       stroke="black"
@@ -194,9 +209,11 @@
                     />
                   </svg>
                 </div>
+                <!-- Progress bar -->
                 <input type="range" value="0" id="progress" />
+                <!-- Repeat -->
                 <div class="cursor-pointer">
-                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="w-4 h-4" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="repeat">
                     <path
                       d="M15.0625 1L17.875 3.8125M17.875 3.8125L15.0625 6.625M17.875 3.8125H4.75C2.67893 3.8125 1 5.49143 1 7.5625M3.8125 16L1 13.1875M1 13.1875L3.8125 10.375M1 13.1875H14.125C16.196 13.1875 17.875 11.5085 17.875 9.4375"
                       stroke="black"
@@ -221,13 +238,13 @@
                   <button class="avatar dropdown dropdown-end rounded-full transition-all">
                     <div class="w-11 rounded-full">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M16.5 2.25C14.7051 2.25 13.25 3.70507 13.25 5.5C13.25 5.69591 13.2673 5.88776 13.3006 6.07412L8.56991 9.38558C8.54587 9.4024 8.52312 9.42038 8.50168 9.43939C7.94993 9.00747 7.25503 8.75 6.5 8.75C4.70507 8.75 3.25 10.2051 3.25 12C3.25 13.7949 4.70507 15.25 6.5 15.25C7.25503 15.25 7.94993 14.9925 8.50168 14.5606C8.52312 14.5796 8.54587 14.5976 8.56991 14.6144L13.3006 17.9259C13.2673 18.1122 13.25 18.3041 13.25 18.5C13.25 20.2949 14.7051 21.75 16.5 21.75C18.2949 21.75 19.75 20.2949 19.75 18.5C19.75 16.7051 18.2949 15.25 16.5 15.25C15.4472 15.25 14.5113 15.7506 13.9174 16.5267L9.43806 13.3911C9.63809 12.9694 9.75 12.4978 9.75 12C9.75 11.5022 9.63809 11.0306 9.43806 10.6089L13.9174 7.4733C14.5113 8.24942 15.4472 8.75 16.5 8.75C18.2949 8.75 19.75 7.29493 19.75 5.5C19.75 3.70507 18.2949 2.25 16.5 2.25ZM14.75 5.5C14.75 4.5335 15.5335 3.75 16.5 3.75C17.4665 3.75 18.25 4.5335 18.25 5.5C18.25 6.4665 17.4665 7.25 16.5 7.25C15.5335 7.25 14.75 6.4665 14.75 5.5ZM6.5 10.25C5.5335 10.25 4.75 11.0335 4.75 12C4.75 12.9665 5.5335 13.75 6.5 13.75C7.4665 13.75 8.25 12.9665 8.25 12C8.25 11.0335 7.4665 10.25 6.5 10.25ZM16.5 16.75C15.5335 16.75 14.75 17.5335 14.75 18.5C14.75 19.4665 15.5335 20.25 16.5 20.25C17.4665 20.25 18.25 19.4665 18.25 18.5C18.25 17.5335 17.4665 16.75 16.5 16.75Z"
-                            fill="#ffffff"
-                          />
-                        </svg>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16.5 2.25C14.7051 2.25 13.25 3.70507 13.25 5.5C13.25 5.69591 13.2673 5.88776 13.3006 6.07412L8.56991 9.38558C8.54587 9.4024 8.52312 9.42038 8.50168 9.43939C7.94993 9.00747 7.25503 8.75 6.5 8.75C4.70507 8.75 3.25 10.2051 3.25 12C3.25 13.7949 4.70507 15.25 6.5 15.25C7.25503 15.25 7.94993 14.9925 8.50168 14.5606C8.52312 14.5796 8.54587 14.5976 8.56991 14.6144L13.3006 17.9259C13.2673 18.1122 13.25 18.3041 13.25 18.5C13.25 20.2949 14.7051 21.75 16.5 21.75C18.2949 21.75 19.75 20.2949 19.75 18.5C19.75 16.7051 18.2949 15.25 16.5 15.25C15.4472 15.25 14.5113 15.7506 13.9174 16.5267L9.43806 13.3911C9.63809 12.9694 9.75 12.4978 9.75 12C9.75 11.5022 9.63809 11.0306 9.43806 10.6089L13.9174 7.4733C14.5113 8.24942 15.4472 8.75 16.5 8.75C18.2949 8.75 19.75 7.29493 19.75 5.5C19.75 3.70507 18.2949 2.25 16.5 2.25ZM14.75 5.5C14.75 4.5335 15.5335 3.75 16.5 3.75C17.4665 3.75 18.25 4.5335 18.25 5.5C18.25 6.4665 17.4665 7.25 16.5 7.25C15.5335 7.25 14.75 6.4665 14.75 5.5ZM6.5 10.25C5.5335 10.25 4.75 11.0335 4.75 12C4.75 12.9665 5.5335 13.75 6.5 13.75C7.4665 13.75 8.25 12.9665 8.25 12C8.25 11.0335 7.4665 10.25 6.5 10.25ZM16.5 16.75C15.5335 16.75 14.75 17.5335 14.75 18.5C14.75 19.4665 15.5335 20.25 16.5 20.25C17.4665 20.25 18.25 19.4665 18.25 18.5C18.25 17.5335 17.4665 16.75 16.5 16.75Z"
+                          fill="#ffffff"
+                        />
+                      </svg>
                     </div>
                     <ul class="dropdown-content z-50 menu p-3 mt-3 shadow bg-black rounded-box w-52">
                       <li><a class="hover:text-white rounded-xl">Instgram Story</a></li>
@@ -271,9 +288,7 @@
               <tr class="text-white text-lg">
                 <th class="w-5 font-light"></th>
                 <th class="font-light">
-                  <a href="audioplayerlovelovelove.html">
-                  Next Playing
-                  </a>
+                  <a href="audioplayerlovelovelove.html"> Next Playing </a>
                 </th>
                 <th class="w-24">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock w-6 h-5" viewBox="0 0 16 16">
