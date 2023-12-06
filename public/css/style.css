@@ -2054,6 +2054,10 @@ html {
   height: 24rem;
 }
 
+.h-\[188px\] {
+  height: 188px;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -2065,6 +2069,10 @@ html {
 
 .h-sidebar {
   height: 97%;
+}
+
+.h-cover {
+  height: 188px;
 }
 
 .w-1\/2 {
@@ -2450,6 +2458,18 @@ html {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#292a2c\] {
+  --tw-gradient-from: #292a2c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(41 42 44 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#271D1D\] {
+  --tw-gradient-from: #271D1D var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(39 29 29 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-\[\#8892B2\] {
   --tw-gradient-to: #8892B2 var(--tw-gradient-to-position);
 }
@@ -2460,6 +2480,14 @@ html {
 
 .to-secondary {
   --tw-gradient-to: #323232 var(--tw-gradient-to-position);
+}
+
+.to-\[\#898478\] {
+  --tw-gradient-to: #898478 var(--tw-gradient-to-position);
+}
+
+.to-\[\#555148\] {
+  --tw-gradient-to: #555148 var(--tw-gradient-to-position);
 }
 
 .object-cover {

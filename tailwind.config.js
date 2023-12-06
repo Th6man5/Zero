@@ -21,6 +21,7 @@ module.exports = {
       },
       height: {
         sidebar: "97%",
+        cover: "188px"
       },
       blur: {
         xs: "1px",
