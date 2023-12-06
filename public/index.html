@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>hello</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-
+    <title>Home | Zero</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
-
       * {
         font-family: "kanit";
       }
@@ -17,10 +14,10 @@
   </head>
   <body>
     <div id="sidebarWrap" class="sm:p-2">
-      <aside id="sidebar" class="fixed z-40 w-64 h-screen bg-primary hidden sm:block pt-0 transition-all rounded-lg" aria-label="Sidebar">
+      <aside id="sidebar" class="fixed z-40 w-64 h-sidebar bg-primary hidden sm:block pt-0 transition-all rounded-lg mt-1">
         <div class="h-full px-3 pb-4 overflow-y-auto bg-primary rounded-lg">
           <!-- Tombol Buat Sidebar tutup-->
-          <div class="flex items-center sm:hidden mb-5" id="sidebarButClose">
+          <div class="flex items-center sm:hidden mb-5 mt-5" id="sidebarButClose">
             <a onclick="mobileSidebarClose()" class="flex ms-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-grid-fill w-6 h-6 text-gray-500 ease-in hover:text-white transition-all" viewBox="0 0 16 16">
                 <path
@@ -31,9 +28,11 @@
           </div>
           <!-- END SIdebar Button -->
           <hr class="bg-coba border-none h-1 rounded-2xl sm:hidden" />
+
+          <!-- Home Button -->
           <ul class="space-y-2 font-medium mb-5 mt-5">
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg bg-secondary hover:bg-secondary">
+              <a href="home.html" class="flex items-center p-2 text-white rounded-lg bg-secondary hover:bg-secondary text-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path
                     d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
@@ -42,8 +41,11 @@
                 <span class="ms-3">Home</span>
               </a>
             </li>
+            <!-- End Home Button -->
+
+            <!-- Explore -->
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-secondary group">
+              <a href="explore.html" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-compass flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                   <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
@@ -51,8 +53,11 @@
                 <span class="flex-1 ms-3 whitespace-nowrap">Explore</span>
               </a>
             </li>
+            <!-- End Explore -->
+
+            <!-- NEWS -->
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-secondary group">
+              <a href="news.html" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-card-heading flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
                   <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z" />
@@ -60,11 +65,12 @@
                 <span class="flex-1 ms-3 whitespace-nowrap">News</span>
               </a>
             </li>
+            <!-- END NEWS -->
           </ul>
           <hr class="bg-coba border-none h-1 rounded-2xl" />
           <ul class="space-y-2 font-medium mt-5">
             <li>
-              <a href="#" class="flex items-center p-2 text-white rounded-lg hover:bg-secondary group">
+              <a href="#" class="flex items-center p-2 text-gray-500 hover:text-white rounded-lg hover:bg-secondary group hover:text-lg transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-list flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-white" viewBox="0 0 16 16">
                   <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
                   <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
@@ -78,8 +84,8 @@
         </div>
       </aside>
     </div>
-
-    <div class="sm:px-4 sm:ml-64">
+    <div class="sm:px-4 sm:ml-64 pb-3">
+      <!-- NAVBAR -->
       <nav class="z-30 w-full bg-primary rounded-md sticky top-0 sm:relative">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -123,9 +129,9 @@
 
             <!-- Search Bar -->
             <div class="flex-grow items-center ms-2 me-4 relative sm:block hidden">
-              <input type="text" class="pl-10 pr-4 py-2 border rounded-lg w-full" placeholder="Search..." />
+              <input type="text" class="pl-10 pr-4 py-2 border rounded-lg w-full bg-white" placeholder="Search..." />
 
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search w-5 h-5" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
@@ -135,138 +141,319 @@
 
             <!-- Profile Picture -->
             <div class="flex items-center">
-              <div class="flex items-center">
-                <div>
-                  <button type="button" class="flex text-sm me-3 sm:me-0 bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-10 h-10 object-cover rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo" />
-                  </button>
+              <button class="avatar dropdown dropdown-end focus:ring-white focus:ring-2 rounded-full transition-all btn-ghost">
+                <div class="w-11 rounded-full">
+                  <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                 </div>
-                <div class="z-30 hidden my-4 text-base list-none bg-primary divide-y divide-gray-100 rounded shadow" id="dropdown-user">
-                  <div class="px-4 py-3" role="none">
-                    <p class="text-sm text-white" role="none">Neil Sims</p>
-                    <p class="text-sm font-medium text-white truncate" role="none">neil.sims@flowbite.com</p>
-                  </div>
-                  <ul class="py-1" role="none">
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Earnings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white" role="menuitem">Sign out</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+                <ul class="dropdown-content z-50 menu p-3 mt-3 shadow bg-black rounded-box w-52">
+                  <li><a class="hover:text-white rounded-t-xl rounded-b-none">Profile</a></li>
+                  <li class="hover:bg-red-700 rounded-b-xl"><a class="hover:text-white">Logout</a></li>
+                </ul>
+              </button>
             </div>
             <!-- End Profile -->
           </div>
         </div>
       </nav>
-      <div class="p-4 rounded-lg mt-4">
-        <div class="grid grid-cols-3 gap-4 mb-4">
-          <div class="flex items-center justify-center h-24 rounded bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
+      <!-- NAVBAR END -->
+
+      <div class="bg-primary p-4 rounded-lg mt-4 h-full">
+        <div class="p-4">
+          <h1 class="text-3xl text-accent font-bold my-4">Popular Artist</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <img class="h-48 object-cover w-full" src="https://images.alphacoders.com/581/581668.jpg" />
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Taylor Swift</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://i.scdn.co/image/7e95de681981d980eacaeddf93d6bff7c77f4a69" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Wave to Earth</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://dy1njwx6v16vt.cloudfront.net/wp-content/uploads/sites/44/2021/01/Olivia-Social.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Olivia Rodrigo</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img class="h-48 object-cover" src="https://i.ytimg.com/vi/VzmUgRluiC4/maxresdefault.jpg" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">SZA</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <img class="h-48 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnCB8EYikVH9O4ILr_rB9mRZov7sPFEkoFA&usqp=CAU" />
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Shawn Mendes</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://th.bing.com/th/id/OIP._RyJDUJVHq6SNtfXKESlygHaEK?w=2560&h=1440&rs=1&pid=ImgDetMain" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Ariana Grande</h1>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center justify-center h-24 rounded bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Recommendation</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <img class="h-48 object-cover" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/5sos-NZ4A4323.jpg/1200px-5sos-NZ4A4323.jpg" />
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">5SOS</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://images.genius.com/30560c2276b2312c3b41ddab06ce69d9.972x972x1.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Yoasobi</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://lastfm.freetls.fastly.net/i/u/ar0/99b4fc0d3102e770729f1ba15bfcc8a0.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Day6</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img class="h-48 object-cover" src="https://images6.alphacoders.com/115/1156178.jpg" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Seventeen</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://static.billboard.com/files/media/Charlie-Puth-press-photo-2018-a-billboard-1548-compressed.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Charlie Puth</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://uproxx.com/wp-content/uploads/2021/02/justin-bieber-justice-crop-def-jam-grid.jpg?w=710" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Justin Bieber</h1>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center justify-center h-24 rounded bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Recently Played</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <a href="statistik artis.html">
+                    <img class="h-48 object-cover" src="https://i.ibb.co/z2ZkPX4/Tame-Impala-Matt-Sav-SYNTK.jpg" />
+                  </a>
+                </figure>
+
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <a href="statistik artis.html">
+                    <h1 class="text-center text-white text-lg tracking-wider">Tame Impala</h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://th.bing.com/th/id/OIP._RyJDUJVHq6SNtfXKESlygHaEK?w=2560&h=1440&rs=1&pid=ImgDetMain" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Ariana Grande</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <img class="h-48 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnCB8EYikVH9O4ILr_rB9mRZov7sPFEkoFA&usqp=CAU" />
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Shawn Mendes</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img class="h-48 object-cover" src="https://www.musicmundial.com/en/wp-content/uploads/2022/07/Ailee-is-leaving-THE-L1VE-agency.jpg" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Ailee</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://www.kosmo.com.my/wp-content/uploads/2022/01/COVER-TIARA.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Tiara Andini</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://static.billboard.com/files/media/Charlie-Puth-press-photo-2018-a-billboard-1548-compressed.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Charlie Puth</h1>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-800">
-          <p class="text-2xl text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-            </svg>
-          </p>
-        </div>
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
+
+          <h1 class="text-3xl text-accent font-bold my-4">K-pop</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://1739752386.rsc.cdn77.org/data/images/full/243839/iu.png" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">IU</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://wallpapercave.com/wp/wp6815304.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">LeeHi</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://i.scdn.co/image/ab6761610000e5eb5da361915b1fa48895d4f23f" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">NewJeans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img class="h-48 object-cover" src="https://conkdekpop.com/wp-content/uploads/2023/05/le_sserafim_unforgiven_14.jpeg" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Le Sserafim</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://wallpapers.com/images/featured/itzy-izb2zsgwn9e7nv4z.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Itzy</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://www.musicmundial.com/en/wp-content/uploads/2022/07/Ailee-is-leaving-THE-L1VE-agency.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Ailee</h1>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-800">
-          <p class="text-2xl text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-            </svg>
-          </p>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
-          </div>
-          <div class="flex items-center justify-center rounded h-28 bg-gray-800">
-            <p class="text-2xl text-gray-500">
-              <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-              </svg>
-            </p>
+
+          <h1 class="text-3xl text-accent font-bold my-4">Indonesian</h1>
+
+          <div class="carousel w-full carousel-center rounded-box h-48">
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover w-full" src="https://i.scdn.co/image/e5f21f389a04984003b5c9973ab36a3e2061430a" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Afgan</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://3.bp.blogspot.com/-5igDfYEFyrM/WaFZWqs8HzI/AAAAAAAAC8g/Evo9f4n-pWoGgd35rMj5TTXDRqquePu3QCLcBGAs/s1600/raisa-harumkan-nama-indonesia_m_114321.jpeg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Raisa</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://3.bp.blogspot.com/-_ddxRmA0Utg/WQf0aFOfu0I/AAAAAAAAMAo/aswnfKWOoQwsWC86dahmgm7rA021vvAHQCLcB/s1600/Tulus%2B1.JPG" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Tulus</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure>
+                  <figure><img class="h-48 object-cover w-full" src="https://e1.pxfuel.com/desktop-wallpaper/123/345/desktop-wallpaper-perankan-ainun-saat-muda-ini-film-yang-pernah-dibintangi-maudy-ayunda-maudy-ayunda.jpg" /></figure>
+                </figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Maudy Ayunda</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://www.nme.com/wp-content/uploads/2021/07/indonesia-singer-lyodra-releases-self-titled-debut-album-2021-interview@2000x1270.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Lyodra</h1>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item lg:mr-20 mr-5">
+              <div class="card w-56 shadow-xl">
+                <figure><img class="h-48 object-cover" src="https://www.kosmo.com.my/wp-content/uploads/2022/01/COVER-TIARA.jpg" /></figure>
+                <div class="card-body p-1 bg-secondary mt-3 rounded-lg">
+                  <h1 class="text-center text-white text-lg tracking-wider">Tiara Andini</h1>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/404.js"></script>
+    <script src="js/sidebarMobile.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
